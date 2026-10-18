@@ -1,54 +1,76 @@
 # Retail Pulse Analytics
-### E-Commerce Revenue & Customer Intelligence Dashboard
-Interactive e-commerce revenue and customer intelligence dashboard built using Power BI, DAX, and the UCI Online Retail dataset. Features revenue trends, country-wise analysis, top products, KPI cards, and customer identification insights.
+### E-Commerce Revenue & Customer Intelligence Analytics
 
 ## Project Overview
-Retail Pulse Analytics is an interactive Power BI dashboard developed to analyze online retail transactions and visualize key business metrics. It provides insights into revenue trends, order activity, product performance, country-wise sales, and customer identification.
+Retail Pulse Analytics is an end-to-end e-commerce analytics project using Python, SQL, Excel, and Power BI to explore retail transactions, prepare sales data, analyze business metrics, and visualize revenue and product performance.
 
 ## Dashboard Preview
 ![Retail Pulse Analytics Dashboard](retail-pulse-dashboard.png)
 
 ## Project Objectives
-- Monitor overall revenue, orders, customers, and products.
-- Analyze monthly revenue trends.
-- Compare revenue across countries.
-- Identify top-performing products by revenue.
-- Examine identified and unknown customer records.
+- Analyze e-commerce revenue and order activity.
+- Explore monthly revenue trends.
+- Identify top-performing products and countries.
+- Investigate missing values, duplicate records, and unusual transactions.
+- Build an interactive business intelligence dashboard.
 
 ## Dataset
-- **Source:** UCI Online Retail dataset
+- **Dataset:** UCI Online Retail
 - **Period:** December 2010 – December 2011
-- **Key fields:** Invoice number, product code, description, quantity, invoice date, unit price, customer ID, and country.
+- **Original data:** 541,909 rows and 8 columns.
+- **After duplicate removal:** 536,641 rows.
+- **Filtered sales dataset:** 524,878 rows and 9 columns.
 
 ## Tools and Technologies
-- Microsoft Power BI
-- DAX (Data Analysis Expressions)
-- Power Query
-- Data cleaning and visualization
+- Python — Pandas, Matplotlib
+- SQL — MySQL
+- Microsoft Excel — formulas and PivotTables
+- Power BI — interactive dashboards and visualization
+- DAX — business metrics
+
+## Project Workflow
+
+### 1. Python EDA
+- Inspected dataset structure and descriptive statistics.
+- Identified missing values and duplicate records.
+- Examined negative quantities, non-positive prices, and cancellation invoices.
+- Created monthly revenue, top 10 products, and top 10 countries visualizations.
+
+### 2. SQL Analysis
+- Calculated total revenue, orders, customers, and products.
+- Analyzed monthly and country-wise revenue.
+- Identified top 10 products by revenue.
+- Calculated average order value.
+
+### 3. Excel Analysis
+- Created a Revenue column using Quantity × UnitPrice.
+- Calculated summary metrics, including total revenue, orders, customers, products, and average order value.
+- Started a PivotChart for revenue analysis.
+
+### 4. Power BI Dashboard
+- Created KPI cards for Total Revenue, Total Orders, Total Customers, and Total Products.
+- Built monthly revenue, country revenue, top product, and customer identification visuals.
+- Added an interactive country slicer.
 
 ## Data Preparation
 - Removed duplicate records.
-- Excluded cancellation invoices beginning with `C`.
-- Filtered out records with non-positive quantities and unit prices for sales analysis.
-- Calculated revenue as quantity multiplied by unit price.
-- Classified customer records based on CustomerID availability.
+- Excluded invoice numbers beginning with `C` from the filtered sales analysis.
+- Retained records with positive quantities and positive unit prices.
+- Calculated revenue as Quantity × UnitPrice.
 
-## Dashboard Features
-1. **KPI Cards:** Total Revenue, Total Orders, Total Customers, and Total Products.
-2. **Monthly Revenue Trend:** Displays revenue by month.
-3. **Revenue by Country:** Compares revenue across countries.
-4. **Top 10 Products by Revenue:** Ranks products based on revenue.
-5. **Invoice Rows by Customer Segment:** Compares invoice rows for identified and unknown customers.
-6. **Customer Identification Breakdown:** Visualizes the split between records with and without a CustomerID.
-7. **Country Slicer:** Filters dashboard results by country.
+## Key EDA Findings
+- Description had 1,454 missing values (0.27%).
+- CustomerID had 135,037 missing values (25.16%).
+- The cleaned dataset contained 10,587 negative-quantity rows, 2,512 non-positive-price rows, and 9,251 rows with invoice numbers beginning with `C`; these categories may overlap.
+
+## Project Files
+- `Retail Pulse Analytics.pbix` — Power BI report
+- `retail-pulse-dashboard.png` — dashboard screenshot
+- `retail_pulse_eda.ipynb` — Python EDA notebook
+- `retail_pulse_analysis.sql` — SQL analysis queries
 
 ## Skills Demonstrated
-Power BI, DAX measures, data preparation, KPI analysis, business intelligence, and interactive dashboard development.
-
-## How to View
-- View the dashboard preview above.
-- Download the `.pbix` file from this repository, when available.
-- Open the file in Microsoft Power BI Desktop to explore the report interactively.
+Data cleaning, exploratory data analysis, SQL querying, Excel analysis, DAX measures, KPI analysis, data visualization, and business intelligence.
 
 ## Project Status
-Initial dashboard development and validation completed.
+Power BI dashboard completed; supporting EDA, SQL, and Excel analysis documented as part of the project workflow.

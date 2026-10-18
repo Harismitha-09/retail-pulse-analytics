@@ -1,4 +1,5 @@
-# retail-pulse-analytics-
+# Retail Pulse Analytics
+### E-Commerce Revenue & Customer Intelligence Dashboard
 Interactive e-commerce revenue and customer intelligence dashboard built using Power BI, DAX, and the UCI Online Retail dataset. Features revenue trends, country-wise analysis, top products, KPI cards, and customer identification insights.
 ### E-Commerce Revenue & Customer Intelligence Dashboard
 
